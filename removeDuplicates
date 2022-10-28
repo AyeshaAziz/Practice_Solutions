@@ -1,0 +1,15 @@
+// Remove duplicates from an array without sorting
+const numbers = [1, 2, 3, 2, 4, 5, 5, 6];
+const set = new Set(numbers);
+const unique = [...set];
+console.log(unique);
+
+// Find out duplicates removed from the array
+const duplicates = numbers.filter(num => {
+  if(set.has(num)){
+    set.delete(num);
+  } else {
+    return num;
+  }
+}); 
+console.log(duplicates);
